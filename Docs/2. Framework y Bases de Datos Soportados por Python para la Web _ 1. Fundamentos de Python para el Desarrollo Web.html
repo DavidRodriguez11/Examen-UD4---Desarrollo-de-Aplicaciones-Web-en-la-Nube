@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2. Framework y Bases de Datos Soportados por Python para la Web | 1. Fundamentos de Python para el Desarrollo Web </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="ESIT El Salvador" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">1. Fundamentos de Python para el Desarrollo Web</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Inicio</a></li>
+   <li><a href="1_introduccin_a_python.html" class="no-ch">1. Introducción a Python</a></li>
+   <li id="active"><a href="2_framework_y_bases_de_datos_soportados_por_python_para_la_web.html" class="active no-ch">2. Framework y Bases de Datos Soportados por Python para la Web</a></li>
+   <li><a href="3_introduccin_a_flask.html" class="no-ch">3. Introducción a Flask</a></li>
+   <li><a href="4_instalacin_de_los_recursos_necesarios.html" class="daddy">4. Instalación de los Recursos Necesarios</a>
+   <ul class="other-section">
+      <li><a href="41_extensiones_para_vscode.html" class="no-ch">4.1 Extensiones para VSCode</a></li>
+   </ul>
+   </li>
+   <li><a href="5_creando_el_espacio_de_desarrollo.html" class="no-ch">5. Creando el Espacio de Desarrollo</a></li>
+   <li><a href="6_hola_mundo_en_flask.html" class="no-ch">6. "Hola Mundo" en Flask</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_introduccin_a_python.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_introduccin_a_flask.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2. Framework y Bases de Datos Soportados por Python para la Web</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id3">
+<div class="iDevice emphasis0">
+<div id="ta3_85" class="block iDevice_content">
+<p><img src="2.png" alt="" width="4044" height="1024" /></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id4">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Contenido</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_131_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Python es un lenguaje ampliamente utilizado en el desarrollo web gracias a su facilidad de uso, versatilidad y la disponibilidad de frameworks robustos y eficientes. Además, su soporte para una gran variedad de bases de datos permite construir aplicaciones web dinámicas y escalables. A continuación, exploraremos los frameworks más destacados y las bases de datos comúnmente utilizadas con Python para el desarrollo web.</p>
+<div class="exe-fx exe-paginated">
+<h2>1. Frameworks Full-Stack</h2>
+<p style="text-align: justify;">Estos frameworks ofrecen un conjunto completo de herramientas para desarrollar aplicaciones web, incluyendo soporte para la capa de datos, vistas, controladores y plantillas.</p>
+<p style="text-align: justify;"><strong>Django:</strong></p>
+<ul>
+<li style="text-align: justify;">Framework robusto y completo, conocido por seguir el principio "Don't Repeat Yourself" (DRY).</li>
+<li style="text-align: justify;">Incluye ORM (Object-Relational Mapping), sistema de autenticación, administración automatizada y más.</li>
+<li style="text-align: justify;">Ideal para aplicaciones grandes y complejas.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-python">
+<div>
+<pre><code>from django.shortcuts import render
+
+def home(request):
+    return render(request, 'home.html', {'mensaje': 'Hola Mundo'})</code></pre>
+</div>
+</div>
+<p><strong>Pyramid:</strong></p>
+<ul>
+<li>Más flexible que Django, permite mayor personalización.</li>
+<li>Adecuado para proyectos en los que se requiera elegir herramientas específicas en lugar de un enfoque todo-en-uno.</li>
+</ul>
+<h2><strong>2. Microframeworks</strong></h2>
+<p>Los microframeworks son ligeros y no imponen una estructura específica. Son ideales para aplicaciones más pequeñas o si se requiere flexibilidad en la elección de herramientas.</p>
+<p>Flask:</p>
+<ul>
+<li>Sencillo y minimalista.</li>
+<li>No incluye un ORM ni herramientas específicas para la capa de datos; puedes integrar las que prefieras.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-python">
+<div>
+<pre><code>from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return 'Hola, Mundo!'
+
+if __name__ == '__main__':
+    app.run()</code></pre>
+</div>
+</div>
+<p><strong>Bottle:</strong></p>
+<ul>
+<li>Extremadamente liviano y fácil de usar.</li>
+<li>Ideal para aplicaciones muy pequeñas o APIs REST.</li>
+</ul>
+<p><strong>FastAPI:</strong></p>
+<ul>
+<li>Diseñado para construir APIs rápidas y eficientes.</li>
+<li>Soporte nativo para OpenAPI y JSON Schema.</li>
+<li>Excelente para aplicaciones que priorizan rendimiento y compatibilidad con estándares modernos.</li>
+</ul>
+</div>
+<h3 style="text-align: justify;">Bases de Datos Soportadas por Python</h3>
+<p style="text-align: justify;">Python tiene soporte para bases de datos relacionales y no relacionales a través de librerías y herramientas ORM.</p>
+<div class="exe-fx exe-paginated">
+<h2>1. Bases de Datos Relacionales</h2>
+<p>Las bases de datos relacionales estructuran los datos en tablas y utilizan SQL para gestionarlos.</p>
+<p><strong>MySQL/MariaDB:</strong></p>
+<ul>
+<li>Soporte a través de librerías como mysql-connector-python o PyMySQL.</li>
+<li>Django incluye soporte nativo para MySQL.</li>
+</ul>
+<p><strong>PostgreSQL:</strong></p>
+<ul>
+<li>Base de datos avanzada y robusta, conocida por su soporte a consultas complejas y extensiones como PostGIS.</li>
+<li>Django y SQLAlchemy tienen integración nativa con PostgreSQL.</li>
+</ul>
+<p><strong>SQLite:</strong></p>
+<ul>
+<li>Base de datos liviana que no requiere servidor.</li>
+<li>Excelente para prototipos y aplicaciones pequeñas.</li>
+<li>Incluida por defecto en Python (sqlite3).</li>
+</ul>
+<p><strong>Oracle y Microsoft SQL Server:</strong></p>
+<p>Soporte a través de librerías específicas como cx_Oracle y pyodbc.</p>
+<h2 style="text-align: justify;">2. Bases de Datos No Relacionales</h2>
+<p style="text-align: justify;">Para aplicaciones que requieren flexibilidad en el esquema de datos o alto rendimiento en operaciones específicas.</p>
+<p style="text-align: justify;"><strong>MongoDB:</strong></p>
+<ul>
+<li style="text-align: justify;">Base de datos orientada a documentos.</li>
+<li style="text-align: justify;">Soporte en Python a través de pymongo y frameworks como Flask o FastAPI.</li>
+</ul>
+<p style="text-align: justify;"><strong>Redis:</strong></p>
+<ul>
+<li style="text-align: justify;">Base de datos clave-valor, ideal para caché y almacenamiento de sesiones.</li>
+<li style="text-align: justify;">Usada frecuentemente junto con frameworks como Django y Flask.</li>
+</ul>
+<p style="text-align: justify;"><strong>Cassandra:</strong></p>
+<ul>
+<li style="text-align: justify;">Base de datos distribuida para manejar grandes volúmenes de datos.</li>
+<li style="text-align: justify;">Compatible con Python mediante cassandra-driver.</li>
+</ul>
+<p style="text-align: justify;"><strong>Firebase/Firestore:</strong></p>
+<ul>
+<li style="text-align: justify;">Base de datos basada en la nube, muy utilizada en aplicaciones móviles.</li>
+<li style="text-align: justify;">Acceso en Python mediante bibliotecas como firebase-admin.</li>
+</ul>
+<h2 style="text-align: justify;">3. ORM en Python</h2>
+<p style="text-align: justify;">Los ORM (Object-Relational Mappers) simplifican la interacción con bases de datos relacionales al permitir trabajar con objetos Python en lugar de escribir SQL manualmente.</p>
+<p style="text-align: justify;"><strong>Django ORM:</strong> Incluido en Django; permite definir modelos y relaciones directamente en Python.</p>
+<div class="highlighted-code code-style-2 language-python">
+<div>
+<pre><code>from django.db import models
+
+class Usuario(models.Model):
+    nombre = models.CharField(max_length=100)
+    correo = models.EmailField()</code></pre>
+</div>
+</div>
+<p><strong>SQLAlchemy:</strong></p>
+<ul>
+<li>Librería ORM independiente, compatible con múltiples bases de datos.</li>
+<li>Ofrece mayor flexibilidad y control en comparación con Django ORM.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-python">
+<div>
+<pre><code>from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
+
+class Usuario(Base):
+    __tablename__ = 'usuarios'
+    id = Column(Integer, primary_key=True)
+    nombre = Column(String)</code></pre>
+</div>
+</div>
+<p><strong>Tortoise ORM:</strong></p>
+<ul>
+<li>Diseñado para aplicaciones asíncronas.</li>
+<li>Popular en proyectos que usan FastAPI o Sanic.</li>
+</ul>
+</div>
+<p style="text-align: justify;"></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_introduccin_a_python.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_introduccin_a_flask.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_adultos_js.js"></script></body></html>
